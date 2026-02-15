@@ -148,7 +148,10 @@ def train_step(
     Returns:
         loss (float)
     """
-    from .diffusion import add_fourier_noise
+    try:
+        from .diffusion import add_fourier_noise
+    except ImportError:
+        from diffusion import add_fourier_noise
 
     model.train()
     batch = batch.to(device)
