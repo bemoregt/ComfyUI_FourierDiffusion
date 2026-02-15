@@ -181,8 +181,11 @@ class FourierDiffusionUNet(nn.Module):
         super().__init__()
         self.in_channels = in_channels
         self.model_channels = model_channels
+        self.channel_mults = tuple(channel_mults)
         self.num_res_blocks = num_res_blocks
         self.num_levels = len(channel_mults)
+        self.attention_levels = tuple(attention_levels)
+        self.dropout = dropout
         attention_set = set(attention_levels)
 
         time_emb_dim = model_channels * 4

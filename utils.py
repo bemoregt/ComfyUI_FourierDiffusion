@@ -41,11 +41,10 @@ def save_checkpoint(
         "model_config": {
             "in_channels": model.in_channels,
             "model_channels": model.model_channels,
-            "channel_mults": list(
-                [b[0].in_ch if hasattr(b[0], 'in_ch') else model.model_channels
-                 for b in model.enc_blocks]
-            ),
+            "channel_mults": list(model.channel_mults),
             "num_res_blocks": model.num_res_blocks,
+            "attention_levels": list(model.attention_levels),
+            "dropout": model.dropout,
         },
         "epoch": epoch,
         "step": step,
