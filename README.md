@@ -2,7 +2,7 @@
 
 A ComfyUI custom node set for image generation using a **Fourier-domain diffusion model** — a denoising diffusion probabilistic model (DDPM) that operates directly on FFT frequency coefficients rather than in spatial pixel space.
 
-![이미지 스펙트럼 예시](https://github.com/bemoregt/ComfyUI_FourierDiffusion/blob/main/ScrShot%2012.png)
+![이미지 스펙트럼 예시](https://github.com/bemoregt/ComfyUI_FourierDiffusion/blob/main/ScrShot%2013.png)
 
 ---
 
