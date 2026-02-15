@@ -18,12 +18,11 @@ from torch.utils.data import Dataset, DataLoader
 from torchvision import transforms
 from PIL import Image
 
-# 패키지 루트를 sys.path에 추가
-sys.path.insert(0, str(Path(__file__).parent.parent))
-
-from ComfyUI_FourierDiffusion.model import FourierDiffusionUNet
-from ComfyUI_FourierDiffusion.diffusion import FourierDiffusionScheduler
-from ComfyUI_FourierDiffusion.utils import save_checkpoint, load_checkpoint, train_step
+# nodes.py(folder_paths 의존)를 거치지 않고 직접 임포트
+sys.path.insert(0, str(Path(__file__).parent))
+from model import FourierDiffusionUNet
+from diffusion import FourierDiffusionScheduler
+from utils import save_checkpoint, load_checkpoint, train_step
 
 
 # ---------------------------------------------------------------------------
